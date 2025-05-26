@@ -345,7 +345,7 @@ a button:hover {
 }
 
 .contact {
-  background-color: #f5f5f5;
+  background-color: #070606;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -359,7 +359,7 @@ a button:hover {
 
 .main-contact,
 .social-links {
-  color: black;
+  color: white;
   text-align: right;
 }
 
@@ -376,7 +376,7 @@ a button:hover {
 
 /* Social links style */
 .social-links a {
-  color: black;
+  color: white;
   margin-left: 10px;
   font-size: 20px;
   text-decoration: none;
@@ -515,3 +515,83 @@ footer {
 
 
 
+.video-preview {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* You can adjust this */
+  margin: 30px auto; /* Center horizontally with spacing */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Play icon button */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65px;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.play-btn .triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  margin-left: 5px;
+}
+
+/* Overlay text */
+.overlay-text {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Optional hover effect */
+.video-preview:hover img {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .play-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-btn .triangle {
+    border-left: 15px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  .overlay-text {
+    font-size: 16px;
+  }
+}
